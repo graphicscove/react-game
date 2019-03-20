@@ -1,0 +1,113 @@
+{
+    "id": 1,
+    "name": "Mercia",
+    "location": "1:1",
+    "resources": {
+        "food": {
+            "value": 500,
+            "baseMultiplier": 30,
+            "building": "farm"
+        },
+        "wood": {
+            "value": 500,
+            "baseMultiplier": 20,
+            "building": "forest"
+        },
+        "stone": {
+            "value": 0,
+            "baseMultiplier": 10,
+            "building": "stonemine"
+        },
+        "ore": {
+            "value": 0,
+            "baseMultiplier": 8,
+            "building": "oremine"
+        },
+        "gold": {
+            "value": 0,
+            "baseMultiplier": 5,
+            "building": "goldmine"
+        }
+    },
+    "buildings": {
+        "farm": {
+            "name": "Farm",
+            "resource": "food",
+            "level": 0,
+            "output": 1.5,
+            "cost": {
+                "food": 60,
+                "wood": 15,
+                "stone": 0,
+                "ore": 0,
+                "gold": 0
+            }
+        },
+        "forest": {
+            "name": "Forest",
+            "resource": "wood",
+            "level": 0,
+            "output": 1.5,
+            "cost": {
+                "food": 48,
+                "wood": 24,
+                "stone": 0,
+                "ore": 0,
+                "gold": 0
+            }
+        },
+        "stonemine": {
+            "name": "Stone Mine",
+            "resource": "stone",
+            "level": 0,
+            "output": 1,
+            "cost": {
+                "food": 75,
+                "wood": 30,
+                "stone": 0,
+                "ore": 0,
+                "gold": 0
+            }
+        },
+        "oremine": {
+            "name": "Ore Mine",
+            "resource": "ore",
+            "level": 0,
+            "output": 0.75,
+            "cost": {
+                "food": 225,
+                "wood": 75,
+                "stone": 30,
+                "ore": 0,
+                "gold": 0
+            }
+        },
+        "goldmine": {
+            "name": "Gold Mine",
+            "resource": "gold",
+            "level": 0,
+            "output": 0.25,
+            "cost": {
+                "food": 900,
+                "wood": 360,
+                "stone": 180,
+                "ore": 75,
+                "gold": 0
+            }
+        }
+    },
+    "troops": {
+        "scout": {
+            "name": "Scout",
+            "cost": {
+                "food": 50,
+                "wood": 0,
+                "stone": 0,
+                "ore": 0,
+                "gold": 0
+            },
+            "count": 0,
+            "time": 2
+        }
+    }
+}
