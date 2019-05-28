@@ -12,6 +12,32 @@ import Marketplace from './components/Marketplace.js';
 import Quests from './components/Quests.js';
 
 class App extends Component {
+    constructor() {
+        super()
+        this.state = {
+            dateTime: '',
+            food: gameData.resources.food.value,
+            wood: gameData.resources.wood.value,
+            stone: gameData.resources.stone.value,
+            ore: gameData.resources.ore.value,
+            gold: gameData.resources.gold.value
+        }
+        setInterval(this.tick, 1000);
+    }
+
+    tick = () => {
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        this.setState({
+            dateTime: time.toString(),
+            food: gameData.resources.food.value++,
+            wood: gameData.resources.wood.value++,
+            stone: gameData.resources.stone.value++,
+            ore: gameData.resources.ore.value++,
+            gold: gameData.resources.gold.value++
+        });
+    }
+
     resourceMultiplier() {
         for(var material in gameData.resources) {
               gameData.resources[material].value = gameData.resources[material].baseMultiplier * 1 * 1.1^ 1
@@ -19,9 +45,9 @@ class App extends Component {
     }
 
     render() {
-        console.log(gameData);
         return (
             <>
+                {this.state.dateTime}
                 <header className="header">
                     <CityInfo name={gameData.name} location={gameData.location} />
                 </header>
